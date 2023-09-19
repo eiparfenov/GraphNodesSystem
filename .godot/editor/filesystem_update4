@@ -1,0 +1,10 @@
+res://temp_and_test/test.tscn
+res://GUI/pointer.tscn
+res://GUI/gui.tscn
+res://graph_nodes/line.tscn
+res://graph_nodes/graph_node.tscn
+res://graph_nodes/graph_node_ui.tscn
+res://graph_nodes/connector.tscn
+res://temp_and_test/resolution_test.tscn
+res://GUI/gui.gd
+res://GUI/pointer.gd

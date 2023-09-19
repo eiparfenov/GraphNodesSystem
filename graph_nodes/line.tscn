@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd6vhc7vj7dkh"]
+
+[ext_resource type="Script" path="res://graph_nodes/line.gd" id="1_y1nle"]
+
+[sub_resource type="Curve3D" id="Curve3D_r15gk"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -5.14781, 0.629564, -3.35755, 1, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Line" type="CSGPolygon3D"]
+polygon = PackedVector2Array(-0.05, -0.05, -0.05, 0.05, 0.05, 0.05, 0.05, -0.05)
+mode = 2
+path_node = NodePath("Path3D")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 1
+path_local = false
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+script = ExtResource("1_y1nle")
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_r15gk")

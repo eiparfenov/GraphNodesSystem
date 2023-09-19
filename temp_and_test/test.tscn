@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://hmek42fmbf5p"]
+
+[ext_resource type="PackedScene" uid="uid://b4nsyamjfavpk" path="res://GUI/pointer.tscn" id="2_0ewu0"]
+[ext_resource type="PackedScene" uid="uid://tm81j63eiysf" path="res://graph_nodes/graph_node.tscn" id="2_gevyv"]
+
+[sub_resource type="Environment" id="Environment_7okka"]
+background_mode = 1
+
+[node name="Test" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.29075)
+current = true
+
+[node name="Pointer" parent="." instance=ExtResource("2_0ewu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317563, 0.0466481, 0.724947)
+target_position = Vector3(0, 0, -1)
+temp_mov_speed = 0.5
+
+[node name="GraphNode" parent="." instance=ExtResource("2_gevyv")]
+
+[node name="GraphNode2" parent="." instance=ExtResource("2_gevyv")]
+transform = Transform3D(0.940916, 0, 0.338639, 0, 1, 0, -0.338639, 0, 0.940916, -1.03484, 0, 0.168326)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7okka")

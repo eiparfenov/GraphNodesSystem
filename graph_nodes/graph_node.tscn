@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://tm81j63eiysf"]
+
+[ext_resource type="PackedScene" uid="uid://pjj6ogpwslox" path="res://GUI/gui.tscn" id="1_ta8ax"]
+[ext_resource type="Script" path="res://graph_nodes/graph_node.gd" id="2_atyag"]
+[ext_resource type="PackedScene" uid="uid://budoh7ww275mx" path="res://graph_nodes/graph_node_ui.tscn" id="3_e4p1d"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e6dsb"]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hoa5"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_e6dsb")
+
+[node name="GraphNode" instance=ExtResource("1_ta8ax")]
+script = ExtResource("2_atyag")
+input_contract = Array[String](["summand1", "summand2"])
+output_contract = Array[String](["result"])
+ppu = 400.0
+
+[node name="Display" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_7hoa5")
+
+[node name="Area" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="NodeUi" parent="Viewport" index="0" instance=ExtResource("3_e4p1d")]

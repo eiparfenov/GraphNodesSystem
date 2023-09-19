@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://be7aqtawr4li4"]
+
+[ext_resource type="Script" path="res://graph_nodes/connector.gd" id="1_d1yr2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15nsf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.917647, 0.870588, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m6t48"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Connector" type="Control"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d1yr2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_15nsf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PinName"
+label_settings = SubResource("LabelSettings_m6t48")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="." method="_on_panel_mouse_exited"]

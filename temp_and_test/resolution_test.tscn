@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://djm6m2jtu06x2"]
+
+[ext_resource type="PackedScene" uid="uid://budoh7ww275mx" path="res://graph_nodes/graph_node_ui.tscn" id="1_f83du"]
+
+[node name="resolution_test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -752.0
+offset_bottom = -548.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NodeUi" parent="." instance=ExtResource("1_f83du")]
+layout_mode = 1
