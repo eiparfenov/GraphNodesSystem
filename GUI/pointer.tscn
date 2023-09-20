@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4nsyamjfavpk"]
+[gd_scene load_steps=5 format=3 uid="uid://b4nsyamjfavpk"]
 
 [ext_resource type="Script" path="res://GUI/pointer.gd" id="1_sg433"]
+[ext_resource type="PackedScene" uid="uid://tle53susg2ns" path="res://graph_nodes/graph_nodes/test_node.tscn" id="2_ah807"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j3rl"]
 shading_mode = 0
@@ -12,6 +13,7 @@ albedo_color = Color(1, 0, 0, 1)
 collide_with_areas = true
 collide_with_bodies = false
 script = ExtResource("1_sg433")
+temp_node_scene = ExtResource("2_ah807")
 
 [node name="SpherePointer" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)

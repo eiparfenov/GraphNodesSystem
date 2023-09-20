@@ -40,5 +40,6 @@ label_settings = SubResource("LabelSettings_m6t48")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="gui_input" from="Panel" to="." method="_on_panel_gui_input"]
 [connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
 [connection signal="mouse_exited" from="Panel" to="." method="_on_panel_mouse_exited"]

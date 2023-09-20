@@ -1,6 +1,7 @@
 extends RayCast3D
 
 @export var temp_mov_speed: float
+@export var temp_node_scene: PackedScene
 @onready var sphere_pointer: MeshInstance3D = $SpherePointer
 
 
@@ -37,6 +38,7 @@ var button_pressed: bool = false:
 			event.button_index = MOUSE_BUTTON_LEFT
 			event.pressed = false
 			target.handle_mouse(event)
+			get_node("/root/Test/GraphNodes3dController").handle_button_up()
 		
 		button_pressed = value
 		
@@ -63,9 +65,20 @@ func _process(delta):
 	
 	button_pressed = Input.is_key_pressed(KEY_Z)
 	
+	if Input.is_action_just_pressed("add_node_temp"):
+		_temp_node_creation()
+	
 
 func _temp_movement(delta):
 	if Input.is_key_pressed(KEY_W): global_position += Vector3.UP * temp_mov_speed * delta
 	if Input.is_key_pressed(KEY_S): global_position += Vector3.DOWN * temp_mov_speed * delta
 	if Input.is_key_pressed(KEY_A): global_position += Vector3.LEFT * temp_mov_speed * delta
 	if Input.is_key_pressed(KEY_D): global_position += Vector3.RIGHT * temp_mov_speed * delta
+
+
+func _temp_node_creation():
+	get_node("/root/Test/GraphNodes3dController").create_graph_node(
+		temp_node_scene,
+		global_position + Vector3.FORWARD,
+		global_rotation
+	)

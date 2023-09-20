@@ -6,5 +6,13 @@ res://graph_nodes/graph_node.tscn
 res://graph_nodes/graph_node_ui.tscn
 res://graph_nodes/connector.tscn
 res://temp_and_test/resolution_test.tscn
-res://GUI/gui.gd
+res://graph_nodes/graph_nodes_3d_controller.tscn
+res://player/player.tscn
+res://graph_nodes/graph_node.gd
+res://graph_nodes/graph_nodes_3d_controller.gd
+res://graph_nodes/graph_node_ui.gd
+res://graph_nodes/connector.gd
+res://graph_nodes/graph_nodes/test_node.tscn
 res://GUI/pointer.gd
+res://graph_nodes/line.gd
+res://graph_nodes/graphs/test.txt

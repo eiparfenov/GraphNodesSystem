@@ -1,0 +1,29 @@
+{
+"connections": [{
+"input_connector_idx": 0,
+"input_node_id": 2,
+"output_connector_idx": 0,
+"output_node_id": 1
+}],
+"nodes": [{
+"id": 0,
+"position": Vector3(-0.317563, 0.0466481, -0.275053),
+"rotation": Vector3(0, 0, 0),
+"scene_path": "res://graph_nodes/graph_nodes/test_node.tscn"
+}, {
+"id": 1,
+"position": Vector3(-0.317563, 0.679981, -0.275053),
+"rotation": Vector3(0, 0, 0),
+"scene_path": "res://graph_nodes/graph_nodes/test_node.tscn"
+}, {
+"id": 2,
+"position": Vector3(0.732395, 0.754981, -0.275053),
+"rotation": Vector3(0, 0, 0),
+"scene_path": "res://graph_nodes/graph_nodes/test_node.tscn"
+}, {
+"id": 3,
+"position": Vector3(0.732395, 0.754981, -0.275053),
+"rotation": Vector3(0, 0, 0),
+"scene_path": "res://graph_nodes/graph_nodes/test_node.tscn"
+}]
+}

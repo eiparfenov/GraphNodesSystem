@@ -14,8 +14,8 @@ albedo_texture = SubResource("ViewportTexture_e6dsb")
 
 [node name="GraphNode" instance=ExtResource("1_ta8ax")]
 script = ExtResource("2_atyag")
-input_contract = Array[String](["summand1", "summand2"])
-output_contract = Array[String](["result"])
+input_contract = Array[String]([])
+output_contract = Array[String]([])
 ppu = 400.0
 
 [node name="Display" parent="." index="0"]
@@ -26,3 +26,8 @@ material_override = SubResource("StandardMaterial3D_7hoa5")
 transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="NodeUi" parent="Viewport" index="0" instance=ExtResource("3_e4p1d")]
+
+[connection signal="pointer_down" from="Viewport/NodeUi" to="." method="_on_node_ui_pointer_down"]
+[connection signal="pointer_entered" from="Viewport/NodeUi" to="." method="_on_node_ui_pointer_entered"]
+[connection signal="pointer_exited" from="Viewport/NodeUi" to="." method="_on_node_ui_pointer_exited"]
+[connection signal="pointer_up" from="Viewport/NodeUi" to="." method="_on_node_ui_pointer_up"]
